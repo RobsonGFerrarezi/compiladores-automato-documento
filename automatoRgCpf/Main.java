@@ -18,9 +18,11 @@ public class Main {
                     switch (escolha) {
                         case 1:
                             validarDocumentoCPF(scan);
+                            scan.nextLine(); // Limpa o buffer após a validação
                             break;
                         case 2:
                             validarDocumentoRG(scan);
+                            scan.nextLine(); // Limpa o buffer após a validação
                             break;
                         case 0:
                             continuar = false;
@@ -39,6 +41,7 @@ public class Main {
         }
     }
 
+    //função para exibir o menu, mantendo o código organizado
     private static void exibirMenu() {
         System.out.println("--- Validador de Documentos ---");
         System.out.println("1 - Validar CPF (formato: 000.000.000-00)");
